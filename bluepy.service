@@ -1,0 +1,14 @@
+[Unit]
+Description=Run Python Script sen.py at startup
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/chen/bluepy
+ExecStart=/home/chen/bluepy/tag/bin/python /home/chen/bluepy/sensortag_ubidots.>
+Restart=always
+User=chen
+
+[Install]
+WantedBy=multi-user.target
+
